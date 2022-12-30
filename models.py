@@ -41,23 +41,3 @@ class User(Base):
 
 
 Base.metadata.create_all(engine)
-
-# class Accommodation(Base):
-#     __tablename__ = "accommodations"
-#
-#     id = Column(Integer, primary_key=True)
-#     name = Column(String)
-#     location = Column(String)
-#     max_guests = Column(Integer)
-#     reservations = relationship("Reservation", back_populates="accommodation")
-#
-# class Reservation(Base):
-#     __tablename__ = "reservations"
-#
-#     id = Column(Integer, primary_key=True)
-#     accommodation_id = Column(Integer, ForeignKey("accommodations.id"))
-#     user_id = Column(Integer, ForeignKey("users.id"))
-#     start_date = Column(Date)
-#     end_date = Column(Date)
-#     accommodation = relationship("Accommodation", back_populates="reservations")
-#     user = relationship("User", back_populates="reservations")
